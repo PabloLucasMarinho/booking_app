@@ -1,0 +1,12 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "wsl.exe",
+            "args": [
+                "/home/pablomarinho/.config/herd-lite/bin/php",
+                "/home/pablomarinho/booking-app/artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
