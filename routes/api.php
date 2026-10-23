@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\TokenController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Support\Facades\Route;
@@ -14,5 +15,7 @@ Route::prefix('v1')->group(function () {
         Route::post('/logout-all', [TokenController::class, 'destroyAll'])->name('auth.destroyAll');
 
         Route::get('/me', [UserController::class, 'me'])->name('auth.me');
+
+        Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
     });
 });

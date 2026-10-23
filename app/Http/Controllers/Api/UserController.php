@@ -12,14 +12,9 @@ class UserController extends Controller
     {
         return new JsonResponse([
             'success' => true,
-            'data' => [
-                'type' => 'user',
-                'id' => $request->user()->id,
-                'attributes' => [
-                    'name' => $request->user()->name,
-                    'email' => $request->user()->email,
-                ],
-            ],
+            'id' => $request->user()->id,
+            'name' => $request->user()->name,
+            'email' => $request->user()->email,
         ], 200);
     }
 }
